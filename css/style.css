@@ -1,0 +1,359 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: #100e1d;
+  color: #e7e7eb;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  position: relative;
+}
+
+.principal {
+  height: 100vh;
+  background: #1e213a;
+}
+
+.search-container {
+  margin: 2rem 4rem;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-container button,
+.wind-status button {
+  color: #e7e7eb;
+  background: #6e707a;
+  border: none;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  padding: 1rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.search-container button:nth-child(2) {
+  width: 4rem;
+  height: 4rem;
+  font-size: 1.8rem;
+  border-radius: 50%;
+}
+
+.iconClima-container {
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.iconClima-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url(../img/Cloud-background.png);
+  background-size: 150%;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.1;
+}
+
+.iconClima-container .icon img {
+  width: 100%;
+  max-width: 200px;
+}
+
+.info-container {
+  text-align: center;
+}
+
+.info-container .degrees {
+  font-size: 14.4rem;
+  font-weight: 500;
+}
+
+.info-container .degrees span {
+  font-size: 4rem;
+  color: #a09fb1;
+  margin-left: -30px;
+}
+
+.info-container .state {
+  font-size: 3.6rem;
+  font-weight: 500;
+  color: #a09fb1;
+  margin: 6rem 0;
+}
+
+.info-container .day,
+.info-container .location {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #88869d;
+  margin: 2rem 0;
+}
+
+/* Section Search */
+
+.search {
+  background-color: #1e213a;
+  max-width: 400px;
+  width: 100%;
+  height: 100vh;
+  padding: 4rem;
+  border: 1px solid gray;
+  position: absolute;
+  left: -400px;
+  top: 0;
+  transition: 0.3s;
+}
+
+.search.isActive {
+  left: 0;
+  animation: animeSearch 0.3s ease-out;
+}
+
+@keyframes animeSearch {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.search > button {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 3.7rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.search > button i {
+  width: 100%;
+}
+
+.search > button:nth-child(2) {
+  position: absolute;
+  top: auto;
+  right: 20px;
+  bottom: 40px;
+  width: 40px;
+  height: 40px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 3.7rem;
+  cursor: pointer;
+  outline: none;
+}
+
+.search .search-box {
+  display: flex;
+  margin: 4rem 0;
+}
+
+.search-box .input-search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  padding: 1rem;
+  margin-right: 5px;
+  border: 1px solid #c7c7c7;
+}
+
+.search-box .input-search input {
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  background: none;
+  font-family: "Raleway", sans-serif;
+  color: white;
+  border: none;
+  outline: none;
+  font-size: 1.8rem;
+}
+
+.search-box .input-search input::placeholder {
+  color: white;
+  font-size: 1.4rem;
+}
+
+.search-box .search-button {
+  width: 90px;
+  height: 50px;
+  border: none;
+  background: #3c47e9;
+  color: #e7e7eb;
+  font-family: "Raleway", sans-serif;
+  cursor: pointer;
+}
+
+.search-record ul li {
+  list-style: none;
+  height: 65px;
+  padding: 0.5rem;
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  border: 1px solid transparent;
+}
+
+.search-record ul li:hover {
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+/* Info */
+
+.info {
+  padding: 5%;
+  background: #100e1d;
+}
+
+.type_temp--container {
+  display: flex;
+  justify-content: end;
+}
+
+.type_temp--container button {
+  border: none;
+  border-radius: 50%;
+  width: 4rem;
+  height: 4rem;
+  margin: 0 1rem;
+  cursor: pointer;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 1.8rem;
+  outline: none;
+  background: #585676;
+  color: #fff;
+}
+
+.type_temp--container button.isActive {
+  background: #e7e7eb;
+  color: black;
+}
+
+.days-temp--container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.days-temp--container .day-temp {
+  background: #1e213a;
+  width: 120px;
+  padding: 2rem;
+  margin: 2.5rem;
+  text-align: center;
+}
+
+.day-temp .icon img {
+  max-width: 56px;
+  width: 100%;
+}
+
+.day-temp .temp-minmax {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0 0;
+}
+
+.day-temp .temp-minmax .temp-min {
+  color: #a09fb1;
+}
+
+.info h2 {
+  font-size: 2.4rem;
+  margin: 2rem;
+}
+
+.detail-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  margin-top: 4rem;
+}
+
+.detail-container > div {
+  width: 100%;
+  max-width: 328px;
+  background: #1e213a;
+  text-align: center;
+  padding: 2rem;
+  justify-self: center;
+}
+
+.detail-container > div .title {
+  font-style: italic;
+}
+
+.detail-container .data {
+  font-size: 4.8rem;
+  font-weight: 700;
+  line-height: 75px;
+}
+
+.detail-container .data span {
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.wind-status button {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.1rem;
+  transform: rotate(180deg);
+}
+
+@media screen and (max-width: 468px) {
+  .main {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .principal {
+    height: 100%;
+  }
+
+  .info-container {
+    margin-bottom: 5rem;
+  }
+
+  .detail-container {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+}

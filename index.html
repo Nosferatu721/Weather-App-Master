@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Weather App</title>
+</head>
+
+<body>
+  <main class="main">
+    <section class="principal">
+      <div class="search-container">
+        <button id="btn-search-call">Seach For Places</button>
+        <button><i class="fas fa-compass"></i></button>
+      </div>
+      <div class="iconClima-container">
+        <figure class="icon">
+          <img src="./img/Shower.png" alt="Icon CLima">
+        </figure>
+      </div>
+      <div class="info-container">
+        <p class="degrees">15 <span>ºC</span></p>
+        <p class="state">Shower</p>
+        <p class="day">Today · Fri 5 Jun</p>
+        <p class="location"><i class="fas fa-map-marker-alt"></i>
+          Helsinki</p>
+      </div>
+    </section>
+    <section id="section-search" class="search">
+      <button><i id="btn-close-search" class="fas fa-times"></i></button>
+      <button><i id="btn-close-search" class="fas fa-times"></i></button>
+      <div class="search-box">
+        <div class="input-search">
+          <label for="search"><i class="fas fa-search"></i></label>
+          <input type="text" id="search" placeholder="Search Location" autocomplete="off">
+        </div>
+        <button class="search-button">Search</button>
+      </div>
+      <div class="search-record">
+        <ul>
+          <li>London</li>
+          <li>Barcelona</li>
+          <li>Long Beach</li>
+        </ul>
+      </div>
+    </section>
+    <section class="info">
+      <div class="type_temp--container">
+        <button class="isActive">ºC</button>
+        <button>ºF</button>
+      </div>
+      <div class="days-temp--container">
+        <div class="day-temp">
+          <p class="day">Tomorrow</p>
+          <figure class="icon">
+            <img src="./img/Thunderstorm.png" alt="Icon CLima">
+          </figure>
+          <div class="temp-minmax">
+            <div class="temp-max">16ºC</div>
+            <div class="temp-min">11ºC</div>
+          </div>
+        </div>
+        <div class="day-temp">
+          <p class="day">Tomorrow</p>
+          <figure class="icon">
+            <img src="./img/Thunderstorm.png" alt="Icon CLima">
+          </figure>
+          <div class="temp-minmax">
+            <div class="temp-max">16ºC</div>
+            <div class="temp-min">11ºC</div>
+          </div>
+        </div>
+        <div class="day-temp">
+          <p class="day">Tomorrow</p>
+          <figure class="icon">
+            <img src="./img/Thunderstorm.png" alt="Icon CLima">
+          </figure>
+          <div class="temp-minmax">
+            <div class="temp-max">16ºC</div>
+            <div class="temp-min">11ºC</div>
+          </div>
+        </div>
+        <div class="day-temp">
+          <p class="day">Tomorrow</p>
+          <figure class="icon">
+            <img src="./img/Thunderstorm.png" alt="Icon CLima">
+          </figure>
+          <div class="temp-minmax">
+            <div class="temp-max">16ºC</div>
+            <div class="temp-min">11ºC</div>
+          </div>
+        </div>
+        <div class="day-temp">
+          <p class="day">Tomorrow</p>
+          <figure class="icon">
+            <img src="./img/Thunderstorm.png" alt="Icon CLima">
+          </figure>
+          <div class="temp-minmax">
+            <div class="temp-max">16ºC</div>
+            <div class="temp-min">11ºC</div>
+          </div>
+        </div>
+      </div>
+      <h2>Today's Hightlights</h2>
+      <div class="detail-container">
+        <div class="wind-status">
+          <p class="title">Wind Status</p>
+          <p class="data">7<span>mph</span></p>
+          <div>
+            <button><i class="fas fa-location-arrow"></i></button>
+            <span>WSW</span>
+          </div>
+        </div>
+        <div class="humidity">
+          <p class="title">Humidity</p>
+          <p class="data">84<span>%</span></p>
+        </div>
+        <div class="visibility">
+          <p class="title">Visibility</p>
+          <p class="data">6,4 <span>miles</span></p>
+        </div>
+        <div class="air-presure">
+          <p class="title">Air Presure</p>
+          <p class="data">998 <span>mb</span></p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/main.js"></script>
+</body>
+
+</html>
